@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" role="img" aria-label="Accurate technology solutions">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e8f4f3"/>
+      <stop offset="100%" stop-color="#d4ebe9"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#64a19d"/>
+      <stop offset="100%" stop-color="#4f837f"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="480" fill="url(#bg)"/>
+  <circle cx="680" cy="80" r="120" fill="#64a19d" opacity="0.12"/>
+  <circle cx="120" cy="400" r="90" fill="#64a19d" opacity="0.08"/>
+  <rect x="80" y="100" width="280" height="200" rx="16" fill="#fff" stroke="#64a19d" stroke-width="2" opacity="0.95"/>
+  <rect x="110" y="130" width="120" height="10" rx="5" fill="url(#accent)" opacity="0.7"/>
+  <rect x="110" y="155" width="200" height="8" rx="4" fill="#c5ddd9"/>
+  <rect x="110" y="175" width="180" height="8" rx="4" fill="#c5ddd9"/>
+  <rect x="110" y="195" width="160" height="8" rx="4" fill="#c5ddd9"/>
+  <rect x="110" y="230" width="80" height="32" rx="8" fill="url(#accent)"/>
+  <rect x="400" y="80" width="320" height="180" rx="16" fill="#fff" stroke="#e2ecea" stroke-width="2"/>
+  <path d="M430 220 L470 160 L510 190 L560 120 L610 220 Z" fill="none" stroke="url(#accent)" stroke-width="4" stroke-linejoin="round"/>
+  <circle cx="560" cy="120" r="6" fill="#64a19d"/>
+  <circle cx="610" cy="220" r="6" fill="#64a19d"/>
+  <rect x="400" y="290" width="150" height="100" rx="12" fill="#fff" stroke="#e2ecea" stroke-width="2"/>
+  <rect x="420" y="315" width="60" height="50" rx="6" fill="url(#accent)" opacity="0.25"/>
+  <rect x="490" y="325" width="40" height="8" rx="4" fill="#c5ddd9"/>
+  <rect x="490" y="345" width="50" height="8" rx="4" fill="#c5ddd9"/>
+  <rect x="570" y="290" width="150" height="100" rx="12" fill="#fff" stroke="#e2ecea" stroke-width="2"/>
+  <circle cx="645" cy="340" r="28" fill="none" stroke="url(#accent)" stroke-width="6" stroke-dasharray="120 40"/>
+  <text x="80" y="400" font-family="system-ui, sans-serif" font-size="28" font-weight="700" fill="#2d4a48">accurate.com.br</text>
+  <text x="80" y="430" font-family="system-ui, sans-serif" font-size="16" fill="#5a7a77">Enterprise technology &amp; software engineering</text>
+</svg>
