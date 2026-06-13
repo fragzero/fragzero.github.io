@@ -9,40 +9,43 @@
   <meta name="description" content="FragZero Sistemas de Informática — criação, desenvolvimento, hospedagem e manutenção de sites e serviços web com as mais novas tecnologias.">
   <meta name="author" content="FragZero">
   <title>FragZero Sistemas de Informática</title>
-  <script>
-    (function () {
-      var theme = localStorage.getItem("fragzero-theme");
-      document.documentElement.setAttribute("data-theme", theme === "light" ? "light" : "dark");
-    })();
-  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
-  <link href="css/site.css" rel="stylesheet">
+  <link href="css/fragzero.css" rel="stylesheet">
 </head>
 
-<body id="page-top">
+<body>
+
+  <div class="intro" id="intro" aria-hidden="true">
+    <div class="intro__inner">
+      <p class="intro__label">Sistemas de Informática</p>
+      <h1 class="intro__title" id="introTitle" data-text="FragZero">FragZero</h1>
+      <div class="intro__bar"></div>
+    </div>
+  </div>
+
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <ol class="section-dots" id="sectionDots" aria-label="Seções da página"></ol>
 
   <nav class="nav" id="mainNav" aria-label="Navegação principal">
     <div class="nav__inner">
       <a class="nav__brand" href="#page-top">FragZero</a>
       <div class="nav__actions">
-        <button class="theme-toggle" type="button" data-label-light="Mudar para tema claro" data-label-dark="Mudar para tema escuro" aria-label="Mudar para tema claro" title="Mudar para tema claro">
-          <i class="fas fa-sun theme-toggle__icon--light" aria-hidden="true"></i>
-          <i class="fas fa-moon theme-toggle__icon--dark" aria-hidden="true"></i>
-        </button>
         <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="navMenu" aria-label="Abrir menu">
           <i class="fas fa-bars" aria-hidden="true"></i>
         </button>
       </div>
       <ul class="nav__menu" id="navMenu">
-        <li><a class="nav__link" href="#about">Atuação</a></li>
-        <li><a class="nav__link" href="#projects">Parceiros</a></li>
-        <li><a class="nav__link" href="#signup">Contato</a></li>
+        <li><a class="nav__link" href="#mission">Sobre</a></li>
+        <li><a class="nav__link" href="#services">Atuação</a></li>
+        <li><a class="nav__link" href="#partners">Parceiros</a></li>
+        <li><a class="nav__link" href="#contact">Contato</a></li>
         <li><a class="nav__link" href="http://blog.fragzero.com.br">Blog</a></li>
-        <li><a class="nav__link" href="http://raffaele.blogspot.com">Tech</a></li>
         <li><a class="nav__link" href="http://shop.fragzero.com.br">Shop</a></li>
+        <li><a class="nav__link nav__link--classic" href="classic_pt-BR.html">Site clássico</a></li>
         <li class="nav__flags">
           <a class="nav__flag" href="index.html" aria-label="English" title="English">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 12" height="16" width="16" aria-hidden="true"><g clip-path="url(#flag_us)"><path fill="#F0F0F0" d="M6 12A6 6 0 1 0 6 0a6 6 0 0 0 0 12"></path><path fill="#D80027" d="M5.74 6H12c0-.542-.072-1.066-.207-1.565H5.74zm0-3.13h5.38a6 6 0 0 0-1.385-1.566H5.739zM6 12c1.412 0 2.71-.488 3.735-1.304h-7.47A5.97 5.97 0 0 0 6 12M.88 9.13h10.24a6 6 0 0 0 .673-1.565H.207c.15.558.379 1.084.674 1.565"></path><path fill="#0052B4" d="M2.78.937h.546l-.509.37.195.597-.509-.37-.508.37.167-.516c-.447.373-.84.81-1.163 1.297h.175L.85 2.92a6 6 0 0 0-.145.256l.155.476-.289-.21a6 6 0 0 0-.196.466l.17.525h.629l-.509.37.195.597-.509-.37-.305.222Q.001 5.62 0 6h6V0a5.97 5.97 0 0 0-3.22.937M3.011 5.4l-.509-.37-.508.37.194-.598-.509-.37h.629l.194-.597.194.598h.63l-.51.37zm-.195-2.346.195.598-.509-.37-.508.37.194-.598-.509-.37h.629l.194-.597.194.598h.63zM5.164 5.4l-.509-.37-.508.37.194-.598-.509-.37h.63l.193-.597.195.598h.628l-.508.37zM4.97 3.054l.194.598-.509-.37-.508.37.194-.598-.509-.37h.63l.193-.597.195.598h.628zm0-1.748.194.598-.509-.37-.508.37.194-.598-.509-.369h.63l.193-.598.195.598h.628z"></path></g><defs><clipPath id="flag_us"><path fill="#fff" d="M0 0h12v12H0z"></path></clipPath></defs></svg>
@@ -55,111 +58,145 @@
     </div>
   </nav>
 
-  <header class="hero">
-    <div class="hero__bg" role="presentation"></div>
-    <div class="hero__content fade-in">
-      <h1 class="hero__title">FragZero</h1>
-      <p class="hero__subtitle">FragZero Sistemas de Informática oferece serviços de criação, desenvolvimento, hospedagem e manutenção de sites e serviços web. Atuando sempre com as mais novas tecnologias.</p>
-      <a href="#about" class="btn btn--primary">Conheça a Atuação</a>
+  <header class="hero snap-section" id="page-top" data-section="0" data-section-label="Início">
+    <canvas class="hero__canvas" id="heroCanvas" aria-hidden="true"></canvas>
+    <div class="hero__gradient" role="presentation"></div>
+    <div class="hero__content">
+      <p class="hero__eyebrow">FragZero Sistemas de Informática</p>
+      <h1 class="hero__title chroma">Construindo o futuro digital com IA</h1>
+      <p class="hero__subtitle">Criação, desenvolvimento, hospedagem e manutenção de sites e serviços web — sempre com as mais novas tecnologias.</p>
+      <a href="#mission" class="hero__scroll">
+        <span class="hero__scroll-line" aria-hidden="true"></span>
+        Role para explorar
+      </a>
     </div>
   </header>
 
-  <section id="about" class="section services">
+  <section class="mission snap-section" id="mission" data-section="1" data-section-label="Sobre">
     <div class="container">
-      <div class="section__header fade-in">
-        <span class="section__label">O que fazemos</span>
-        <h2 class="section__title">Atuação</h2>
-        <p class="section__desc">Trabalhando com médias e pequenas empresas, pessoas físicas, instituições comerciais e financeiras e outras áreas de atuação, para atender e criar a solução na internet.</p>
+      <div class="mission__grid">
+        <p class="mission__index reveal">01 — Sobre</p>
+        <p class="mission__text reveal reveal-delay-1">
+          Trabalhamos com médias e pequenas empresas, pessoas físicas e instituições para <em>atender e criar a solução na internet.</em>
+        </p>
       </div>
-      <div class="services__visual fade-in">
+    </div>
+  </section>
+
+  <section class="services snap-section" id="services" data-section="2" data-section-label="Atuação">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-head__label">O que fazemos</span>
+        <h2 class="section-head__title chroma">Atuação</h2>
+      </div>
+
+      <div class="ice-grid">
+        <article class="ice-block reveal">
+          <p class="ice-block__num">01</p>
+          <h3 class="ice-block__title">Desenvolvimento Web</h3>
+          <p class="ice-block__desc">Sites e aplicações web personalizados com frameworks modernos e melhores práticas.</p>
+        </article>
+        <article class="ice-block reveal reveal-delay-1">
+          <p class="ice-block__num">02</p>
+          <h3 class="ice-block__title">Hospedagem &amp; Manutenção</h3>
+          <p class="ice-block__desc">Infraestrutura confiável com manutenção contínua, atualizações e monitoramento de segurança.</p>
+        </article>
+        <article class="ice-block reveal reveal-delay-2">
+          <p class="ice-block__num">03</p>
+          <h3 class="ice-block__title">Consultoria</h3>
+          <p class="ice-block__desc">Orientação tecnológica para operações comerciais, financeiras e empresariais em evolução digital.</p>
+        </article>
+      </div>
+
+      <div class="services__visual reveal">
         <img src="img/ipad.png" alt="Site exibido em um tablet">
       </div>
     </div>
   </section>
 
-  <section id="projects" class="section partners">
+  <section class="partners snap-section" id="partners" data-section="3" data-section-label="Parceiros">
     <div class="container">
-      <div class="partners__intro fade-in">
-        <div class="partners__intro-img">
-          <img src="img/bg-masthead.jpg" alt="Ambiente de trabalho tecnológico">
-        </div>
-        <div>
-          <span class="section__label">Colaboração</span>
-          <h2 class="section__title">Parceiros</h2>
-          <p class="section__desc">Parcerias são importantes para crescimento comercial e evolução da empresa. Segue a lista dos parceiros que podemos oferecer para evolução tecnológica do seu negócio.</p>
-        </div>
+      <div class="section-head reveal">
+        <span class="section-head__label">Colaboração</span>
+        <h2 class="section-head__title chroma">Parceiros</h2>
       </div>
 
-      <div class="partners__grid">
-        <article class="partner-card fade-in">
-          <div class="partner-card__image">
+      <div class="partner-showcase">
+        <article class="partner-panel reveal">
+          <div class="partner-panel__media">
             <img src="img/partner-accurate.svg" alt="Accurate — tecnologia empresarial e engenharia de software">
           </div>
-          <div class="partner-card__body">
-            <h3 class="partner-card__name"><a href="https://accurate.com.br">accurate.com.br</a></h3>
-            <p class="partner-card__desc">Diversas soluções na área de tecnologia com mais de 30 anos de experiência, sempre com agilidade e qualidade.</p>
-            <a href="https://accurate.com.br" class="partner-card__link">Visitar parceiro <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+          <div class="partner-panel__body">
+            <h3 class="partner-panel__name"><a href="https://accurate.com.br">accurate.com.br</a></h3>
+            <p class="partner-panel__desc">Diversas soluções na área de tecnologia com mais de 30 anos de experiência, sempre com agilidade e qualidade.</p>
+            <a href="https://accurate.com.br" class="partner-panel__link">Visitar parceiro <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
           </div>
         </article>
 
-        <article class="partner-card partner-card--reverse fade-in">
-          <div class="partner-card__image">
+        <article class="partner-panel reveal">
+          <div class="partner-panel__media">
             <img src="img/partner-csbvirtual.svg" alt="CSB Virtual — campeonatos de e-sports e ligas de futebol virtual">
           </div>
-          <div class="partner-card__body">
-            <h3 class="partner-card__name"><a href="https://csbvirtual.blogspot.com">csbvirtual.blogspot.com</a></h3>
-            <p class="partner-card__desc">Confederação Sorocabana de Boleiros Virtuais, solução para e-sports e organização para campeonatos de jogos online e presencial.</p>
-            <a href="https://csbvirtual.blogspot.com" class="partner-card__link">Visitar parceiro <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+          <div class="partner-panel__body">
+            <h3 class="partner-panel__name"><a href="https://csbvirtual.blogspot.com">csbvirtual.blogspot.com</a></h3>
+            <p class="partner-panel__desc">Confederação Sorocabana de Boleiros Virtuais — solução para e-sports e organização de campeonatos online e presencial.</p>
+            <a href="https://csbvirtual.blogspot.com" class="partner-panel__link">Visitar parceiro <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
           </div>
         </article>
       </div>
     </div>
   </section>
 
-  <section id="signup" class="contact-cta">
-    <div class="contact-cta__bg" role="presentation"></div>
-    <div class="container fade-in">
-      <i class="far fa-paper-plane contact-cta__icon" aria-hidden="true"></i>
-      <h2 class="contact-cta__title">Entre em Contato</h2>
-      <form class="contact-cta__form" method="POST" action="https://fragzero.wordpress.com/contato">
-        <input type="email" class="contact-cta__input" name="email" id="inputEmail" placeholder="Informe seu email..." required>
-        <button type="submit" class="btn btn--primary">Contato</button>
+  <section class="contact-section snap-section" id="contact" data-section="4" data-section-label="Contato">
+    <div class="container contact-section__inner">
+      <h2 class="contact-section__title reveal chroma">Entre em Contato</h2>
+      <p class="contact-section__desc reveal reveal-delay-1">Pronto para iniciar seu próximo projeto? Envie uma mensagem e retornaremos em breve.</p>
+      <form class="contact-form reveal reveal-delay-2" method="POST" action="https://fragzero.wordpress.com/contato">
+        <input type="email" class="contact-form__input" name="email" placeholder="Informe seu email..." required>
+        <button type="submit" class="btn btn--solid">Contato</button>
       </form>
-    </div>
-  </section>
 
-  <section class="contact">
-    <div class="container">
-      <div class="contact__grid">
-        <a class="contact-card fade-in" href="https://fragzero.wordpress.com/contato/">
+      <div class="contact-cards">
+        <a class="contact-card reveal" href="https://fragzero.wordpress.com/contato/">
           <i class="fas fa-map-marked-alt contact-card__icon" aria-hidden="true"></i>
           <h3 class="contact-card__title">Contato</h3>
           <p class="contact-card__text">Utilize o formulário</p>
         </a>
-        <a class="contact-card fade-in" href="mailto:fragzero@fragzero.com.br">
+        <a class="contact-card reveal reveal-delay-1" href="mailto:fragzero@fragzero.com.br">
           <i class="fas fa-envelope contact-card__icon" aria-hidden="true"></i>
           <h3 class="contact-card__title">Email</h3>
           <p class="contact-card__text">fragzero@fragzero.com.br</p>
         </a>
-        <a class="contact-card fade-in" href="https://raffaele.blogspot.com">
+        <a class="contact-card reveal reveal-delay-2" href="https://raffaele.blogspot.com">
           <i class="fas fa-code contact-card__icon" aria-hidden="true"></i>
           <h3 class="contact-card__title">Tech</h3>
           <p class="contact-card__text">Posts sobre tecnologia</p>
         </a>
       </div>
+    </div>
+  </section>
 
-      <div class="social">
-        <a href="http://twitter.fragzero.com.br" class="social__link" aria-label="Twitter">
-          <i class="fab fa-twitter" aria-hidden="true"></i>
+  <section class="footer-links snap-section" id="connect" data-section="5" data-section-label="Conectar">
+    <canvas class="footer-links__canvas" id="footerCanvas" aria-hidden="true"></canvas>
+    <div class="container footer-links__inner">
+      <p class="footer-links__label reveal">confira os links</p>
+      <h2 class="contact-section__title reveal chroma">Conectar</h2>
+      <div class="footer-links__grid">
+        <a href="http://twitter.fragzero.com.br" class="footer-link reveal">
+          <i class="fab fa-twitter footer-link__icon" aria-hidden="true"></i>
+          <span class="footer-link__name">Twitter</span>
         </a>
-        <a href="http://twitch.fragzero.com.br" class="social__link" aria-label="Twitch">
-          <i class="fab fa-twitch" aria-hidden="true"></i>
+        <a href="http://twitch.fragzero.com.br" class="footer-link reveal reveal-delay-1">
+          <i class="fab fa-twitch footer-link__icon" aria-hidden="true"></i>
+          <span class="footer-link__name">Twitch</span>
         </a>
-        <a href="http://github.fragzero.com.br" class="social__link" aria-label="GitHub">
-          <i class="fab fa-github" aria-hidden="true"></i>
+        <a href="http://github.fragzero.com.br" class="footer-link reveal reveal-delay-2">
+          <i class="fab fa-github footer-link__icon" aria-hidden="true"></i>
+          <span class="footer-link__name">GitHub</span>
         </a>
-        <a href="http://linkedin.fragzero.com.br" class="social__link" aria-label="LinkedIn">
-          <i class="fab fa-linkedin" aria-hidden="true"></i>
+        <a href="http://linkedin.fragzero.com.br" class="footer-link reveal reveal-delay-3">
+          <i class="fab fa-linkedin footer-link__icon" aria-hidden="true"></i>
+          <span class="footer-link__name">LinkedIn</span>
         </a>
       </div>
     </div>
@@ -171,7 +208,7 @@
     </div>
   </footer>
 
-  <script src="js/site.js"></script>
+  <script src="js/fragzero.js"></script>
 
 </body>
 
